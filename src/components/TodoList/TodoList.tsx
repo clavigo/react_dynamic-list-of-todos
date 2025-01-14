@@ -15,18 +15,10 @@ export const TodoList: React.FC<TodoListProps> = ({
   handleCurrentUser,
   handleCurrentTodo,
 }) => {
-  // useEffect(() => {
-  //   if (currentTodoFromModal) {
-  //     handleCurrentTodo(currentTodoFromModal);
-  //   }
-  // }, [currentTodoFromModal]);
-
   const handleModal = (userId: number, todo: Todo) => {
     handleIsOpened(true);
     handleCurrentUser(userId);
-    // setCurrentTodoFromModal(todo);
     handleCurrentTodo(todo);
-    // setTodoId(todo.id);
   };
 
   return (

@@ -27,7 +27,9 @@ function get<T>(url: string): Promise<T> {
 //   todos: Todo[];
 // }
 
-export const getTodos = (filter: string): Promise<Todo[]> => {
+export const getTodos = (
+  filter: 'all' | 'active' | 'completed',
+): Promise<Todo[]> => {
   const todos = get<Todo[]>('/todos');
 
   switch (filter) {
